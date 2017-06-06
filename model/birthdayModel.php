@@ -1,6 +1,6 @@
 <?php
 
-
+            //open database conectie dingens
  function getBirthday() 
 {
     $db = openDatabaseConnection();
@@ -14,7 +14,7 @@
     return $query->fetchAll();
 }
 
-
+        // add birthday dinges
 function createBirthday(){
     $person = isset($_POST['person']) ? $_POST['person'] : null;
     $day = isset($_POST['day']) ? $_POST['day'] : null;
@@ -39,4 +39,23 @@ function createBirthday(){
     $db = null;
 
     return true;
-}?>
+}
+            //dingens verwijderen
+    function deleteBirthday($id = null) 
+{
+    if (!$id) {
+        return false;
+    }
+    
+    $db = openDatabaseConnection();
+
+    $sql = "DELETE FROM birthdays WHERE id=:id ";
+    $query = $db->prepare($sql);
+    $query->execute(array(
+        ':id' => $id));
+
+    $db = null;
+    
+    return true;
+}
+?>

@@ -1,6 +1,6 @@
 <?php
 
-//function getStudent($id) 
+	function getStudent($id) 
 {
 	$db = openDatabaseConnection();
 
@@ -14,7 +14,7 @@
 	return $query->fetch();
 }
 
-///function getAllStudents() 
+	function getAllStudents() 
 {
 	$db = openDatabaseConnection();
 
@@ -27,7 +27,7 @@
 	return $query->fetchAll();
 }
 
-//function editStudent() 
+	unction editStudent() 
 {
 	$firstname = isset($_POST['firstname']) ? $_POST['firstname'] : null;
 	$lastname = isset($_POST['lastname']) ? $_POST['lastname'] : null;
@@ -53,7 +53,7 @@
 	return true;
 }
 
-//function deleteStudent($id = null) 
+	function deleteStudent($id = null) 
 {
 	if (!$id) {
 		return false;
@@ -71,7 +71,7 @@
 	return true;
 }
 
-//function createStudent() 
+	function createStudent() 
 {
 	$firstname = isset($_POST['firstname']) ? $_POST['firstname'] : null;
 	$lastname = isset($_POST['lastname']) ? $_POST['lastname'] : null;

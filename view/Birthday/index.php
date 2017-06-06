@@ -18,7 +18,7 @@ foreach($birthdays as $birthday) {?>
     <ul>
     	<?=$month[$birthday['month'] -1]; ?>
     </ul>
-    <h4><a href="<?= URL ?>Birthday/delete">Delete</a></h4>
+    <h4><a href="<?= URL ?>Birthday/delete/<?= $birthday['id'];?>"><ul>Delete</ul></a></h4>
 
 <?php }?>
 </ul>
