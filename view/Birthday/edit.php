@@ -1,18 +1,13 @@
-<div class="container">
-	<h1>Edit</h1>
-	<form action="<?= URL ?>student/editSave" method="post">
-	
-		<input type="text" name="firstname" value="<?= $student['student_firstname']; ?>">
-		<input type="text" name="lastname" value="<?= $student['student_lastname']; ?>">
-		
-		<select name="gender">
-			<option value="male" <?php if ($student['student_gender'] == "male") { echo "selected=\"true\""; } ?>>Male</option>
-			<option value="female" <?php if ($student['student_gender'] == "female") { echo "selected=\"true\""; } ?>>Female</option>	
-		</select>
+<h1>Aanpassen</h1>
+<p>Pas de data aan en klik op "opslaan" om de data op te slaan.</p>
 
-		<input type="hidden" name="id" value="<?= $student['student_id']; ?>">
-		<input type="submit" value="Verzenden">
+	<form action="<?= URL ?>Birthday/editSave" method="POST">
+	<input type="hidden" name="id" value="<?= $birthday['id'] ?>"><br>
 	
-	</form>
-
-</div>
+	Person: <input type="text" name="person" value="<?= $birthday['person'] ?>"><br>
+	Day: <input type="text" name="day" value="<?= $birthday['day'] ?>"><br>
+	Month: <input type="text" name="month" value="<?= $birthday['month'] ?>"><br>
+	year: <input type="text" name="year" value="<?= $birthday['year'] ?>"><br>
+	
+	<button type="submit">Opslaan</button>
+</form>
