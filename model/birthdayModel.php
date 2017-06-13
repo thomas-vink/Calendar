@@ -77,7 +77,7 @@ function createBirthday(){
     
     $db = openDatabaseConnection();
 
-    $sql = "UPDATE birthdays SET person = :person, month = :month, day = :day, year = :year, WHERE id = :id";
+    $sql = "UPDATE birthdays SET person = :person, month = :month, day = :day, year = :year WHERE id = :id";
     $query = $db->prepare($sql);
     $query->execute(array(
         ':person' => $person,

@@ -15,15 +15,15 @@ foreach($birthdays as $birthday) {
 
     if ($VorigeDag != $birthday['day']) {
         echo '<ul>';
-        echo '<h1>' . $birthday['day'] .'</h1>';
+        echo '<h2>' . $birthday['day'] .'</h2>';
         echo '</ul>';
     }
      ?>
-    <a href="<?= URL ?>Birthday/edit/<?= $birthday['id'];?>">
+   <h5><a href="<?= URL ?>Birthday/edit/<?= $birthday['id'];?>">
         
            <?=$birthday['person'];?>
         
-    </a>
+    </a></h5>
 
     
 

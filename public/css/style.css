@@ -7,7 +7,7 @@
  
 body {
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
 }
  
 /*
@@ -43,6 +43,15 @@ h4{
   margin-bottom: 0;
   padding-left:95%;
 }
+h5  {
+     font-family: Open Sans Condensed, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  
+  margin-bottom: 0;
+  margin-left:3%;
+
+}
  
 /*
     Position the month names, day numbers, and person names.
@@ -77,6 +86,7 @@ p:last-of-type {    /* the last p-element should act like a normal paragraph sin
 a {
     color: black;
     text-decoration: none;
+    
 }
  
 a:hover {
